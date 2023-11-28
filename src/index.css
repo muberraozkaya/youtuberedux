@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: rgb(15, 15, 15);
+  color: rgba(255, 255, 255, 0.87);
+  margin: 0;
+  overflow-x: hidden;
+
+}
+.videos::-webkit-scrollbar{
+  background: black;
+  width: 9px;
+
+}
+
+.videos::-webkit-scrollbar-thumb{
+  background: gray;
+  border-radius: 10px;
+}
+
+.videos {
+  width: 100%;
+  display: grid;
+  gap: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 450px));
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 100vh;
+  overflow: auto;
+}
+@media (max-width:1300px) {
+  .videos{
+    justify-content: center;
+  }
+}
+
+@media (max-width:768px){
+  .videos {
+    display: flex;
+    flex-direction: column;
+    justify-content: unset;
+    gap: 50px;
+    padding: 20px;
+  }
+}
+
+/* crtl + " > terminal açmanın kısa yolu*/
+
+.row{
+  display: grid;
+  grid-template-columns: 168px auto;
+  gap: 10px;
+}
